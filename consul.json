@@ -1,0 +1,29 @@
+    {
+        "services": [{
+                "ID": "ClientServer1",
+                "Name": "ClientServer1",
+                "Tags": [
+                    "ClientServer1WebApi", "Api"
+                ],
+                "Address": "127.0.0.1",
+                "Port": 8401,
+                "Check": {
+                    "HTTP": "http://127.0.0.1:8401/Api/health",
+                    "Interval": "10s"
+                }
+            }, {
+                "id": "ClientServer2",
+                "name": "ClientServer2",
+                "tags": [
+                    "ClientServer2WebApi","Api"
+                ],
+                "Address": "127.0.0.1",
+                "Port": 8402,
+                "Check": [{
+                        "HTTP": "http://127.0.0.1:8402/Api/health",
+                        "Interval": "10s"
+                    }
+                ]
+            }
+        ]
+    }
